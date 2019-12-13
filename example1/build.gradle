@@ -1,0 +1,25 @@
+plugins {
+    id 'java'
+    id 'application'
+    // JavaFXを利用するためにOpenJFXのプラグインを追加する
+    id 'org.openjfx.javafxplugin' version '0.0.8'
+}
+group 'jumpaku'
+version 'SNAPSHOT'
+// 使用するライブラリのダウンロード元としてMavenセントラルリポジトリを指定する
+repositories {
+    mavenCentral()
+}
+// JavaFXに関する設定をする
+javafx {
+    // 使用するJavaFXのバージョンを指定する
+    version = "13.0.1"
+    // JavaFXで使用するモジュールを指定する（モジュールはJava9の機能）
+    modules = ['javafx.controls', 'javafx.swing']
+}
+// example1.Mainクラスをメインクラスとして指定する
+mainClassName = 'example1.Main'
+// FXGraphics2Dライブラリを追加する
+dependencies {
+    implementation group: 'org.jfree', name: 'fxgraphics2d', version: '1.8'
+}

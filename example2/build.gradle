@@ -1,0 +1,16 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+group 'jumpaku'
+version 'SNAPSHOT'
+// 使用するライブラリのダウンロード元としてMavenセントラルリポジトリを指定する
+repositories {
+    mavenCentral()
+}
+// example2.Mainクラスをメインクラスとして指定する
+mainClassName = 'example2.Main'
+// JFreeSVGライブラリを追加する
+dependencies {
+    implementation group: 'org.jfree', name: 'jfreesvg', version: '3.4'
+}
